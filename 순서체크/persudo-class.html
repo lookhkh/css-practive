@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery{
+            list-style: none;
+            display: flex;
+            height: 100vh;
+
+        }
+
+        .gallery li{
+            border: 5px solid #000;
+            flex: 1;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: 0.3s;
+            
+        }
+
+        .gallery li:last-child{
+            border-right: none;
+        }
+        
+        .gallery li:nth-child(1){
+                background-image: url("./image/artistic-image-01.jpg");
+        }
+        .gallery li:nth-child(2){
+                background-image: url("./image/artistic-image-02.jpg");
+        }
+        .gallery li:nth-child(3){
+                background-image: url("./image/artistic-image-03.jpg");
+        }
+        .gallery li:nth-child(4){
+                background-image: url("./image/artistic-image-04.jpg");
+        }
+        .gallery li:nth-child(5){
+                background-image: url("./image/artistic-image-05.jpg");
+        }
+        
+        .gallery:hover li{
+            flex: 1;
+        }
+
+        .gallery li:hover{
+            flex: 2;
+            filter: grayscale(1);
+        }
+        
+    </style>
+</head>
+<body>
+  <ul class="gallery">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</body>
+</html>
