@@ -27,7 +27,8 @@
             background-repeat: no-repeat;
             background-size: cover;
             transition: 0.3s;
-            
+            position: relative;
+            overflow: hidden;
         }
 
         .gallery li:last-child{
@@ -56,18 +57,80 @@
 
         .gallery li:hover{
             flex: 2;
-            filter: grayscale(1);
+            filter: grayscale(1.2);
+        }
+
+        .content{
+            position: absolute;
+            bottom: 0;
+            background-color: black;
+            color: white;
+            text-align: center;
+            height: 30%;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: inherit;
+        }
+
+
+        .gallery li:hover .content{
+            transition-delay: 0.5s;
+            transform: scaleY(1);
+            text-align: center;
+        }
+
+        .gallery li .content h2{
+            padding: 20px;
+            margin: 0 auto;
+            width: 95%;
+            margin-bottom: 20px;
+            border-bottom: 1px solid white;
         }
         
     </style>
 </head>
 <body>
   <ul class="gallery">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>
+        <div class="content">
+            <h2>Lorem</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo blanditiis quis nobis expedita, 
+                mollitia, modi similique repudiandae qui quos quaerat rerum? Laborum, 
+                sapiente ex repellat sunt quibusdam voluptas commodi tempore.</p>
+            </div>
+    </li>
+    <li>
+        <div class="content">
+            <h2>Lorem</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo blanditiis quis nobis expedita, 
+                mollitia, modi similique repudiandae qui quos quaerat rerum? Laborum, 
+                sapiente ex repellat sunt quibusdam voluptas commodi tempore.</p>
+            </div>
+    </li>
+    <li>
+        <div class="content">
+            <h2>Lorem</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo blanditiis quis nobis expedita, 
+                mollitia, modi similique repudiandae qui quos quaerat rerum? Laborum, 
+                sapiente ex repellat sunt quibusdam voluptas commodi tempore.</p>
+            </div>
+    </li>
+    <li>
+        <div class="content">
+            <h2>Lorem</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo blanditiis quis nobis expedita, 
+                mollitia, modi similique repudiandae qui quos quaerat rerum? Laborum, 
+                sapiente ex repellat sunt quibusdam voluptas commodi tempore.</p>
+            </div>
+    </li>
+    <li>
+        <div class="content">
+            <h2>Lorem</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo blanditiis quis nobis expedita, 
+                mollitia, modi similique repudiandae qui quos quaerat rerum? Laborum, 
+                sapiente ex repellat sunt quibusdam voluptas commodi tempore.</p>
+            </div>
+    </li>
   </ul>
 </body>
 </html>
