@@ -9,6 +9,7 @@
           *{
             box-sizing: border-box;
             margin: 0;
+            padding: 0;
         }
         a{
             text-decoration: none;
@@ -16,25 +17,24 @@
         }
 
         body{
+            position: relative;
             width: 100vw;
             height: 100vh;
             display: flex;
-            justify-content: center;
+            justify-content: right;
             align-items: center;
-            box-sizing: border-box;
-            background-color: hsl(0, 0%, 50%,0.2);
         }
-
+       
         .hamburger-container{
-            width: 50px;
-            height: 50px;
-            background-color: white;
+            width: 40vw;
+            
+            height: 100%;
             position: relative;
             display: flex;
-            justify-content: center;
+            justify-content: right;
             align-items: center;
-     
-        }
+            right: 0px;
+                }
 
         input[type="checkbox"]{
             opacity: 0;
@@ -43,15 +43,17 @@
         }
 
         .line-container{
-            width: 50%;
-            height: 50%;
-            display: block;
+            width: 10%;
+            height: 3%;
+            max-width: 50px;
+            min-width: 50px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             flex-direction: column;
             cursor: pointer;
             position: relative;
+            min-height: 20px;
         }
 
         .line{
@@ -95,16 +97,34 @@
 
         }
 
+        #check:checked ~ .side-menu{
+            width: 90%;
+        }
+
+        .side-menu{
+            height: 100%;
+            width: 0%;
+            background-color: black;
+            transition: 0.3s linear;
+        }
+
+
+
+        
+
     </style>
 </head>
 <body>
-    <div class="hamburger-container">
-        <input type="checkbox" id="check">
-        <label for="check" class="line-container">
-            <span class="line line-transition"></span>
-            <span class="line"></span>
-            <span class="line line-transition"></span>
-        </label>
-    </div>
+        <div class="hamburger-container">
+            <input type="checkbox" id="check">
+            <label for="check" class="line-container">
+                <span class="line line-transition"></span>
+                <span class="line"></span>
+                <span class="line line-transition"></span>
+            </label>
+            <div class="side-menu">
+            </div>
+        </div>
+     
 </body>
 </html>
