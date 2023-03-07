@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            width: 400px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column-reverse;
+        }
+
+        .image-container{
+            width: 100%;
+            height: 90%;
+            position: relative;
+        }
+
+        .controller-container{
+            width: 100%;
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            align-items:flex-start;
+
+        }
+
+        .image-container > img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+        
+        }
+
+        img.visible{
+            opacity: 100;
+        }
+        input{
+            position: relative;
+        }
+        input[type="radio"]::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: gray;
+            border-radius: 100%;
+            cursor: pointer;
+            
+        }
+
+        input[type="radio"]:checked:before{
+            background-color: red;
+            
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="flex-center controller-container">
+            <input type="radio" name="img" data-index="0" checked/>
+            <input type="radio" name="img" data-index="1"/>
+            <input type="radio" name="img" data-index="2"/>
+        </div>
+        <div class="image-container">
+            <img class="visible" src="./image/202208050938211810_1.jpg"/>
+            <img src="./image/26DRZN5PID_1.jpg"/>
+            <img src="./image/다운로드.jpg"/>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+    const controller = document.querySelector('.controller-container');
+    const images = document.querySelectorAll('img');
+    let previous = null;
+
+    controller.addEventListener('click',(e)=>{
+        let target = e.target;
+        if(target.name !== 'img') return ;
+
+        
+        const imageIndex = target.dataset.index;
+        images[imageIndex].classList.add('visible')
+        if(previous && previous!== images[imageIndex]) {
+            previous.classList.remove('visible');
+        }
+        previous = images[imageIndex];
+
+    })
+    
+</script>
