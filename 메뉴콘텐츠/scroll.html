@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: hsl(0, 0%, 50%,0.2);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .scroll-container{
+            right: 0;
+            width: 10%;
+            max-width: 500px;
+            min-width: 300px;
+            height: 100%;
+            background-color: black;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .scroll-content{
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            background-color: antiquewhite;
+        }
+
+        .content-container{
+            height: 30%;
+            width: 100%;
+            background-color: beige;
+        }
+
+        .main-content-container{
+            width: 100%;
+            height: 100%;
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="scroll-container">
+        <div class="scroll-content">
+            <div style="background-color: yellow;" class="content-container"></div>
+            <div style="background-color: red;" class="content-container"></div>
+            <div style="background-color: blue;" class="content-container"></div>
+            <div style="background-color: rgb(85, 61, 61);" class="content-container"></div>
+        </div>
+    </section>
+    <section class="main-content-container">
+
+    </section>
+    <section class="scroll-container">
+        <div class="scroll-content">
+            <div style="background-color: yellow;" class="content-container"></div>
+            <div style="background-color: red;" class="content-container"></div>
+            <div style="background-color: blue;" class="content-container"></div>
+            <div style="background-color: rgb(153, 79, 79);" class="content-container"></div>
+        </div>
+    </section>
+    
+</body>
+</html>
