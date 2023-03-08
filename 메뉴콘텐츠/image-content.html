@@ -24,6 +24,9 @@
             justify-content: center;
             align-items: center;
             flex-direction: column-reverse;
+            position: relative;
+            overflow: hidden;
+
         }
 
         .image-container{
@@ -46,6 +49,7 @@
             height: 100%;
             position: absolute;
             opacity: 0;
+            transition: opacity 0.5s linear;
         
         }
 
@@ -73,6 +77,51 @@
             
         }
 
+        
+        .sale-info{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+            left: 20px;
+            top: -80px;
+            z-index: 100;
+            transition: 0.5s linear;
+            opacity: 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        input[type="radio"]:checked + span{
+            transition-delay: 0.3s;         
+            transform: translateY(120px);
+            opacity: 1;
+        
+        }
+
+        .controller-container input[type="radio"]:nth-child(1):checked + span{
+            background-color: red;       
+            color: white; 
+        }
+
+        .controller-container input[type="radio"]:nth-child(3):checked + span{
+            background-color: white;
+            color: black;
+
+        }
+        .controller-container input[type="radio"]:nth-child(5):checked + span{
+            background-color: black;
+            color: gray;
+        }
+
+        h2,p{
+            margin: 0;
+        }
+
+
     </style>
 </head>
 <body>
@@ -80,9 +129,23 @@
     <div class="container">
         <div class="flex-center controller-container">
             <input type="radio" name="img" data-index="0" checked/>
+            <span class="sale-info">
+                <h2>Sale</h2>
+                <p>30%</p>
+            </span>
+        
             <input type="radio" name="img" data-index="1"/>
+            <span class="sale-info">
+                <h2>Sale</h2>
+                <p>30%</p>
+            </span>    
+
             <input type="radio" name="img" data-index="2"/>
-        </div>
+            
+            <span class="sale-info">
+                <h2>Sale</h2>
+                <p>30%</p>
+            </span>        </div>
         <div class="image-container">
             <img class="visible" src="./image/202208050938211810_1.jpg"/>
             <img src="./image/26DRZN5PID_1.jpg"/>
@@ -105,6 +168,7 @@
 
         
         const imageIndex = target.dataset.index;
+        
         images[imageIndex].classList.add('visible')
         if(previous && previous!== images[imageIndex]) {
             previous.classList.remove('visible');
