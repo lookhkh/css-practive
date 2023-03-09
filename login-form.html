@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+          *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: larger;
+        }
+        
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("99E3B33E5B2852742A.jpeg");
+            
+        }
+
+        .login-form-container{
+            width: 400px;
+            height: 500px;
+            border: 1.5px solid rgba(255, 255, 255, 0.548);
+            border-radius: 5%;
+            text-align: center;
+            color: white;
+            padding: 30px 10px;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .login-form-container .login-form{
+            width: 100%;
+            height: 70%;
+        }
+
+        .inputs-container{
+            height: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .input-container{
+            height: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+        }
+
+        .input-container input{
+            padding: 10px;
+            width: 90%;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid white;
+            color: white;
+        }
+
+
+        input::placeholder {
+            font-weight: bold;
+            opacity: 0.8;
+            color: white;
+        }
+
+
+        .input-container input:focus {
+            outline:none;
+        }
+
+        .input-container i{
+            position: absolute;
+            color: white;
+            left: 90%;
+        }
+
+
+        .controller-container{
+            height: 45%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button[type="submit"]{
+            padding: 10px 30%;
+            border-radius: 50px;
+            margin: 10px 0;
+            border: none;
+            background-color: white;
+        }
+        p,label{
+            font-size: 0.9rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="login-form-container">
+        <h1>Login</h1>
+        <form class="login-form">
+            <div class="inputs-container">
+                <div class="input-container">
+                    <input placeholder="Email" type="text">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="input-container">
+                    <input placeholder="Password" type="text">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+            </div>
+            <div class="controller-container">
+                <div class="check-box-container">
+                    <input type="checkbox" name="check" id="check">
+                    <label for="check">Remember Me Forget Password</label>
+                </div>
+                <button type="submit"><h2>Log in</h2></button>
+                <p>Don`t Have a account <a href="#">Register</a></p>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
