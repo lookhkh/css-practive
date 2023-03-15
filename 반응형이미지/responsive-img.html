@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div{
+            background-color: red;
+            margin: 0 auto;
+            padding: 0;
+            width: 300px;
+            height: 200px;
+
+        }
+
+        h1{
+            color: black;
+        }
+        @media screen and (min-width:600px) {
+            h1{
+                color: red;
+            }    
+            div{
+                width: 600px;
+                height: 400px;
+                background-color: blue;
+            }
+        }
+
+        @media screen and (min-width:900px) {
+            h1{
+                color: blue;
+            }    
+            div{
+                width: 1280px;
+                background-color: green;
+                height: 600px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>HI</h1>
+    <div>
+        <img 
+            src="./maxresdefault-1280.jpg"
+            srcset="./maxresdefault-320.jpg 320w, ./maxresdefault-960.jpg 960w, ./maxresdefault-1280.jpg 1280w"
+            sizes="(max-width: 320px) 320w, (min-width : 320px and max-width: 720px) 960w"
+        />
+    </div>
+</body>
+</html>
+<script>
+    const h1 = document.querySelector('h1');
+
+    window.addEventListener('resize',(e)=>{
+        
+        const width = window.innerWidth;
+        h1.innerHTML = width;
+    })
+</script>

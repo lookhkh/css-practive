@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            background-color: rgb(13, 13, 59);
+        }
+
+        .todo-container{
+            width: 500px;
+            border: 1px solid white;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .todo-list{
+            height: 400px;
+            overflow-y: scroll;
+        }
+
+        i{
+            cursor: pointer;
+        }
+
+        .todo-item{
+            width: 100%;
+            padding: 20px;
+            position: relative;
+            outline: none;
+            color: white;
+        }
+
+        .todo-item i{
+            position: absolute;
+            right: 10px;
+            background-color: white;
+            color: black;
+            border-radius: 100%;
+            padding: 5px;
+        }
+
+        .input-container{
+            width: 100%;
+            height: 50px;
+            position: absolute;
+            background-color: red;
+            left: 0;
+            top: 100%;
+            padding: 5px;
+        }
+
+        .input-container input{
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            border: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .input-container button{
+            width: 20%;
+            border: none;
+            height: 100%;
+            left: calc(100% - 20%);
+            top: 0;
+            position: absolute;
+            background-color: coral;
+            color: white;
+            font-size: larger;
+            cursor: pointer;
+        }
+
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: darkblue;
+            height: 70px;
+        }
+
+        a{
+            color: white;
+            cursor: pointer;
+        }
+
+        a:active{
+            color: coral;
+        }
+
+        header button i {
+            color: coral;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="todo-container">
+        <header style="border: 1px solid white;">
+            <button>
+                <i class="fa-brands fa-facebook-f"></i>
+            </button>
+            <div class="controller-container">
+                   <a>All</a>
+                   <a>Active</a>
+                   <a>Completed</a>
+            </div>
+        </header>
+        <div style="border: 1px solid white;" class="todo-list">
+            <div class="todo-item">
+                <input type="checkbox" name="" id="">
+                <span>공부하기</span>
+                <i class="fa-brands fa-facebook-f"></i>
+            </div>
+        
+        </div>
+        <div style="border: 1px solid white;" class="input-container">
+            <input type="text" placeholder="Add Todo">
+            <button>Add</button>
+        </div>
+    </div>
+
+</body>
+</html>
