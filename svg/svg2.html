@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .shapes{
+            width: 600px;
+            height: 600px;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <svg class="shapes">
+        <rect id="rect" x="10" y="20" width="200" height="100"></rect>
+    </svg>
+</body>
+</html>
+<script>
+    const rect = document.querySelector('#rect');
+    
+    const moveRest = (rect)=>{
+        console.log(rect.x)
+          rect.x += 1;
+          rect.y += 1;
+    }
+
+    requestAnimationFrame(()=>moveRest(rect))
+</script>
