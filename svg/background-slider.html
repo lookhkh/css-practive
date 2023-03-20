@@ -7,7 +7,8 @@
     <title>Document</title>
     <style>
         :root{
-            --button-checked:rgb(49, 43, 43);
+            --button-checked:rgb(143, 72, 72);
+            --opacity-default:0.404;
         }
         *{
             margin: 0;
@@ -21,6 +22,21 @@
             overflow: hidden;
         }
 
+        img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .content:before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+
+  
         .contents{
             width: 300%;
             height: 100%;
@@ -35,8 +51,30 @@
             justify-content: center;
             align-items: center;
             font-size: 2rem;
-            font-weight: 900;
+            font-weight: 1200;
             color: white;
+            position: relative;
+        }
+
+        
+        .content:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .content:nth-of-type(1):before{
+            background-color: rgba(0, 0, 0, var(--opacity-default));
+        }
+        .content:nth-of-type(2):before{
+            background-color: rgba(0, 120, 43, var(--opacity-default));
+        }
+        .content:nth-of-type(3):before{
+            background-color: rgba(80, 44, 43, var(--opacity-default));
         }
 
         input[type=radio]{
@@ -44,14 +82,14 @@
         }
 
         input[type=radio]:nth-of-type(1):checked ~ .controllers label:nth-child(1){
-            background-color: var(--button-checked);
+            color: var(--button-checked);
         }
         input[type=radio]:nth-of-type(2):checked ~ .controllers label:nth-child(2){
-            background-color: var(--button-checked);
+            color: var(--button-checked);
         }
 
         input[type=radio]:nth-of-type(3):checked ~ .controllers label:nth-child(3){
-            background-color: var(--button-checked);
+            color: var(--button-checked);
         }
         
 
@@ -65,20 +103,54 @@
             transform: translateX(-66.66666%);
         }
 
+
         .controllers{
             position: absolute;
-            bottom: 2rem;
+            width: 100%;
+            height: 100px;
+            bottom: 0;
             left: 50%;
             transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.603);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .info{
+            position: absolute;
+            left: 0;
+            top: -100%;
+            width: 100%;
+            height: 30%;
+            background-color: rgba(0, 0, 0, 0.295);
+            transition-delay: 1s;
+            transition: 1s linear; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        
+        input[type=radio]:nth-of-type(1):checked ~ .contents .content:nth-child(1) .info{
+            top: 0;
+        }
+        input[type=radio]:nth-of-type(2):checked ~ .contents .content:nth-child(2) .info{
+            top: 0;
+        }
+        input[type=radio]:nth-of-type(3):checked ~ .contents .content:nth-child(3) .info{
+            top: 0;
+
         }
 
         label{
-            display: inline-block;
-            width: 40px;
-            height: 10px;
-            background-color: white;
+            color: white;
             cursor: pointer;
             border: none;
+            margin: 0 10px;
+            font-size: large;
+            font-weight: 700;
         }
     </style>
 </head>
@@ -88,14 +160,23 @@
             <input type="radio" name="indicator" id="2">
             <input type="radio" name="indicator" id="3">
         <div class="contents">
-            <div style="background-color: red;" class="content">content Red</div>
-            <div style="background-color: blue;" class="content">content Blue</div>
-            <div style="background-color: gray;" class="content">content Gray</div>
+            <div style="background-color: red;" class="content">
+                <img src="./풀스크린 이미지/photo-01.jpg" alt="">
+                <div data-content="1st Content" class="info">1st Content</div>
+            </div>
+            <div style="background-color: blue;" class="content">
+                <img src="./풀스크린 이미지/photo-02.jpg" alt="">
+                <div data-content="2st Content" class="info">2st Content</div>
+            </div>
+            <div style="background-color: gray;" class="content">
+                <img src="./풀스크린 이미지/photo-03.jpg" alt="">
+                <div data-content="3st Content" class="info">3st Content</div>
+            </div>
         </div>
         <div class="controllers">
-            <label for="1"></label>
-            <label for="2"></label>
-            <label for="3"></label>
+            <label for="1">First</label>
+            <label for="2">Second</label>
+            <label for="3">Third</label>
         </div>
     </div>
 
