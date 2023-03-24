@@ -18,7 +18,17 @@
 
     const canvas = document.getElementById("tutorial");
     const ctx = canvas.getContext("2d");
+    const img = new Image(); // Create new img element
+    img.src="./20230323_122909.jpg"
+    img.onload = (e)=>{
+        
+        for(let i=0; i<100; i++){
+            setTimeout(() => {
+                ctx.drawImage(img, 160-i, 200,30,30)
+            }, (100 * i)); 
 
+        }
+    }
 
     const stop = start(ctx,"hoi");
     console.log(stop)
@@ -41,7 +51,7 @@
                     .map((t,idx)=>()=> setTimeout(() => {
                             ctx.strokeText(t, 10+idx*10, 50);
                             if(idx === str.length-1 ){
-                                setTimeout(()=>{ctx.clearRect(0,0,1000,1000)},1000);
+                                setTimeout(()=>{ctx.clearRect(0,0,150,150)},1000);
                             
                             }
                         }, (idx*500)))
