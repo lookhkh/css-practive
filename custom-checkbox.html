@@ -16,73 +16,54 @@
             flex-direction: column;
         }
 
-        input[type=radio]{
+        div{
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        label{
+            display: flex;
+            cursor: pointer;
+
+            min-width: 400px;
+            max-width: 1000px;
+        }
+        input{
             display: none;
         }
-
-        .container{
-           display: flex;
-           align-items: center;
-           margin: 5px 0;
-        }
-        label{
-            cursor: pointer;
-        }
         span{
-            box-sizing: content-box;
-            content: "";
-            width: 500px;
-            height: 500px;
             display: inline-block;
-            border: 1px solid pink;
-            border-radius: 100%;
-            position: relative;
-            top: 0;
-            margin-right: 0.25rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 80%;
         }
 
-        span::before{
-            content: "";
-            width: 70%;
-            height: 70%;
-            display: inline-block;
-            background-color: rgba(23, 43, 43, 0.384);
-            border-radius: 100%;
-            opacity: 0;
+        .text-span{
+            flex-basis: 90%;
+            height: 30px;
+            text-align: center;
+            line-height:200%;
         }
 
-        input:nth-of-type(1):checked ~span::before,
-        input:nth-of-type(2):checked ~span::before,
-        input:nth-of-type(3):checked ~span::before,
-        input:nth-of-type(4):checked ~span::before{
-            opacity: 1;
+        .box{   
+            flex-basis: 10%;
+            background: url("./20230323_122909.jpg") no-repeat;
+            background-position:-15px;
         }
+
+
+         input:checked ~label > span:first-child {
+            background-position:-75px;
+        }
+
     </style>
 </head>
 <body>
     <form action="">
-        <div class="container">
-            <input checked type="radio" name="type" id="q">
-            <span></span>
-            <label for="q">초등학생</label>
-        </div>
-        <div class="container">
-            <input type="radio" name="type" id="w">
-            <span></span>
-            <label for="w">중학생</label>
-        </div>
-        <div class="container">
-            <input type="radio" name="type" id="e">
-            <span></span>
-            <label for="e">고등학생</label>
-        </div>
-        <div class="container">
-            <input type="radio" name="type" id="r">
-            <span></span>
-            <label for="r">대학생</label>
+        <div>
+            <input type="checkbox" name="first" id="first">
+            <label for="first">
+                <span class="box"></span>
+                <span class="text-span">귀하는 아래의 약관의 동의하십니까?</span>
+            </label>
         </div>
     </form>
 </body>

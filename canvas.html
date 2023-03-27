@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas style="border : 1px solid black" width="300" height="300" id="tutorial">
+        Canvas is Not Supported with your browser. please upgrade or change to have full expereicne
+    </canvas>
+    <button>stop</button>
+</body>
+</html>
+<script>
+
+
+    const canvas = document.getElementById("tutorial");
+    const ctx = canvas.getContext("2d");
+    const img = new Image(); // Create new img element
+    img.src="./20230323_122909.jpg"
+    img.onload = (e)=>{
+        
+        for(let i=0; i<100; i++){
+            setTimeout(() => {
+                ctx.drawImage(img, 160-i, 200,30,30)
+            }, (100 * i)); 
+
+        }
+    }
+
+    const stop = start(ctx,"hoi");
+    console.log(stop)
+
+    document.querySelector('button').addEventListener('click',(e)=>clearInterval(stop))
+
+  function start(ctx,str){
+
+    sayHelloWordl(ctx,str)
+
+
+    return setInterval(() => {
+        sayHelloWordl(ctx,str)
+    }, (5000)); 
+  }
+
+  function sayHelloWordl(ctx,str){
+                str
+                    .split("")
+                    .map((t,idx)=>()=> setTimeout(() => {
+                            ctx.strokeText(t, 10+idx*10, 50);
+                            if(idx === str.length-1 ){
+                                setTimeout(()=>{ctx.clearRect(0,0,150,150)},1000);
+                            
+                            }
+                        }, (idx*500)))
+                    .forEach(t=>t())
+  }
+
+</script>
