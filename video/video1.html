@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style>
+        /* Google Web Font */
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+        @import url('http://fonts.googleapis.com/css?family=Monoton');
+        @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+        body{
+            font-family : "Montesrrat",sans-serif;
+            font-weight: 300;
+            margin: 0;
+        }
+
+        a{
+            text-decoration: none;
+        }
+    
+        .video-frame{
+            
+        }
+
+        .video-frame video{
+            position: fixed;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+
+        .logo{
+            position: absolute;
+            top: 50px;
+            left: 100px;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="video-frame">
+            <video autoplay muted loop 
+                   poster="./public/placeholder-female.jpg" 
+                   src="./public/video-female.mp4" />
+            <audio src="./public/piano-bgm.mp3" autoplay loop/>
+        </div>
+        <div class="logo">
+            <img src="public/logo.png" />
+        </div>
+    </div>
+    
+</body>
+</html>
