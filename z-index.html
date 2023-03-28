@@ -74,6 +74,20 @@ h1 {
   text-align: center;
 }
 
+#div7{
+    width: 500px;
+    height: 500px;
+    background-color: #696;
+    display: flex;
+}
+
+#div7 > div{
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    position: absolute;
+}
+
     </style>
 </head>
 <body>
@@ -124,6 +138,14 @@ h1 {
             z-index: 3;
         </code>
         </div>
+    </div>
+    <div style="position: relative;" id="div7">
+        <div style="background-color: red; z-index: 1;"></div>
+        <div style="background-color: blue; left: 3px; z-index: 2;"></div>
+        <div style="background-color: black; left: 60px ; z-index: 3"></div>
+        <div style="background-color: white; left: 90px;"></div>
+        <div style="background-color: green; left: 120px;;"></div>
+
     </div>
 
 </body>
