@@ -114,6 +114,83 @@
             font-size: 150px;
         }
 
+        .trigger{
+            width: 40px;
+            height: 20px;
+            position: absolute;
+            right: 50px;
+            top: 50px;
+            cursor: pointer;
+        }
+        .trigger span{
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: black;
+            transition: 0.3s;
+        }
+
+        .trigger span:nth-child(1){
+            top: 0;
+        }
+        .trigger span:nth-child(2){
+            width: 80%;
+            top: 50%;
+        }
+        .trigger span:nth-child(3){
+            top: 100%;
+        }
+
+        .trigger.active{
+            z-index: 1;
+        }
+
+        .trigger.active span{
+            background-color: white;
+        }
+
+        .trigger.active span:nth-child(1){
+            top: 50%;
+            transform: rotate(45deg);
+        }
+        .trigger.active span:nth-child(2){
+           opacity: 0;
+        }
+        .trigger.active span:nth-child(3){
+            top: 50%;
+            transform: translateY(50%) rotate(-45deg);
+        }
+
+        .modal-gnb{
+            position: absolute;
+            background: rgba(0, 0, 0, 0.623);
+            height: 100vh;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .gnb{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .gnb a{
+            color: white;
+            font-size: 60px;
+            display: block;
+            padding: 10px;
+            font-family: 'Raleway', sans-serif;
+            transition: 0.3s;
+        }
+
+        .gnb a:hover{
+            color: crimson;
+        }
+
+
+
         @keyframes showing  {
             0%{
                 opacity: 0;
@@ -124,6 +201,8 @@
                 margin-left: 0;
             }
         }
+
+
     </style>
 </head>
 <body>
@@ -133,7 +212,7 @@
             <video autoplay muted loop 
                    poster="./public/placeholder-female.jpg" 
                    src="./public/video-female.mp4" />
-            <audio src="./public/piano-bgm.mp3" autoplay loop/>
+            <audio src="./public/piano-bgm.mp3" loop/>
         </div>
         <div class="logo">
             <img src="public/logo.png" />
@@ -153,6 +232,20 @@
         </div>
         <div class="anniversar">
             <em>Anniversary</em><span>60</span>
+        </div>
+        <div class="trigger active">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="modal-gnb">
+            <div class="gnb">
+                <a href="">Attr</a>
+                <a href="">Hotels</a>
+                <a href="">Shop</a>
+                <a href="">Cele</a>
+                <a href="">Promotions</a>
+            </div>
         </div>
     </div>
     
