@@ -197,8 +197,7 @@
             opacity: 0;
         }
 
-        .modal-gnb.active .gnb  a{
-            transition-delay: 0.5s;
+        .modal-gnb.active .gnb a{
             transform: translateX(0);
             opacity: 1;
         }
@@ -285,7 +284,7 @@
 
         const aTags = document.querySelectorAll('.modal-gnb .gnb a');
         aTags.forEach((a,idx)=>{
-            a.style.transitionDelay = `${idx / 5}s`;;
+            a.style.transitionDelay = `${idx / (aTags.length * 50)}s`;;
         })
         
     })
