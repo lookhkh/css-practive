@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+        /* Google Web Font */
+        @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+        /* Fontawesome 4.7 */
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+       
+        body{
+            font-family: "Noto sans KR",'sans=serif';
+            line-height:40px;
+            margin: 0;
+            font-weight: 300;
+            background-color: black;
+            font-size: 15px;
+            color: white;
+         }
+
+         .faq{
+            height: 100vw;
+            margin: auto;
+
+         }
+         .faq-inner{
+            width: 100%;
+            margin: auto;
+         }
+         .faq-inner h1{
+            text-align: center;
+            font-size: 50px;
+            font-weight: 500;
+         }
+         .accordion {
+            font-size: 26px;
+            position: relative;
+         }
+         .accordion .title,
+         .accordion .content{
+            background-color: #303030;
+            padding: 10px 15px;
+            margin-bottom: 7px;
+
+         }
+
+
+
+         .accordion .title{
+            cursor: pointer;
+         }
+
+         .accordion .title span{
+            float: right;
+            transition: .5s;
+         }
+
+         .accordion .title.active span{
+            transform: rotate(45deg);
+        }
+
+
+         .accordion .content{
+            display: none;
+        }
+
+         .accordion .content.show{
+            display: block;
+         }
+
+         .newsletter{
+            width: 90%;
+            margin: auto;
+            text-align: center;
+         }
+         .newsletter p{
+            font-size: 20px;
+         }
+         .newsletter div{
+            display: flex;
+         }
+
+         .newsletter div input,
+         .newsletter div button{
+            outline: none;
+            border: none;
+            height: 60px;
+            vertical-align: middle;
+            font-size: 20px;
+         }
+
+         .newsletter div input{
+            flex: 3;
+         }
+         .newsletter div button{
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            flex: 1;
+         }
+
+         @media screen and (width < 380px) {
+            .newsletter div{
+                display: block;
+                padding: 5px;
+            }
+
+            .newsletter div input,
+            .newsletter div button{
+                display: block;
+                width: 300px;
+                margin: 0 auto;
+                height: 40px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+         }
+
+    </style>
+</head>
+<body>
+
+    <section class="faq">
+        <div class="faq-inner">
+            <h1>자주 묻는 질문</h1>
+            <div class="accordion ">
+                <div class="title">궁금해요<span>+</span></div>
+                <div class="content show">
+                    넷플릭스는 장편 영화, 다큐멘터리, 시리즈, 애니메이션, 
+                    각종 상을 수상한 넷플릭스 오리지널 등 수많은 콘텐츠를 확보하고 있습니다. 
+                    마음에 드는 콘텐츠를 원하는 시간에 원하는 만큼 시청하실 수 있습니다. 
+                </div>
+            </div>
+            
+            <div class="accordion">
+                <div class="title">궁금해요<span>+</span></div>
+                <div class="content">
+                    넷플릭스는 장편 영화, 다큐멘터리, 시리즈, 애니메이션, 
+                    각종 상을 수상한 넷플릭스 오리지널 등 수많은 콘텐츠를 확보하고 있습니다. 
+                    마음에 드는 콘텐츠를 원하는 시간에 원하는 만큼 시청하실 수 있습니다. 
+                </div>
+            </div>
+            <div class="accordion">
+                <div class="title">궁금해요<span>+</span></div>
+                <div class="content">
+                    넷플릭스는 장편 영화, 다큐멘터리, 시리즈, 애니메이션, 
+                    각종 상을 수상한 넷플릭스 오리지널 등 수많은 콘텐츠를 확보하고 있습니다. 
+                    마음에 드는 콘텐츠를 원하는 시간에 원하는 만큼 시청하실 수 있습니다. 
+                </div>
+            </div>
+            <div class="accordion">
+                <div class="title">궁금해요<span>+</span></div>
+                <div class="content">
+                    넷플릭스는 장편 영화, 다큐멘터리, 시리즈, 애니메이션, 
+                    각종 상을 수상한 넷플릭스 오리지널 등 수많은 콘텐츠를 확보하고 있습니다. 
+                    마음에 드는 콘텐츠를 원하는 시간에 원하는 만큼 시청하실 수 있습니다. 
+                </div>
+            </div>
+            
+            <div class="accordion">
+                <div class="title">궁금해요<span>+</span></div>
+                <div class="content">
+                    넷플릭스는 장편 영화, 다큐멘터리, 시리즈, 애니메이션, 
+                    각종 상을 수상한 넷플릭스 오리지널 등 수많은 콘텐츠를 확보하고 있습니다. 
+                    마음에 드는 콘텐츠를 원하는 시간에 원하는 만큼 시청하실 수 있습니다. 
+                </div>
+            </div>
+            
+            <div class="accordion">
+                <div class="title">궁금해요<span>+</span></div>
+                <div class="content">
+                    넷플릭스는 장편 영화, 다큐멘터리, 시리즈, 애니메이션, 
+                    각종 상을 수상한 넷플릭스 오리지널 등 수많은 콘텐츠를 확보하고 있습니다. 
+                    마음에 드는 콘텐츠를 원하는 시간에 원하는 만큼 시청하실 수 있습니다. 
+                </div>
+            </div>
+            <div class="newsletter">
+                <p>시청할 준비과 되었나요?? ㅎㅎ</p>
+                <div>
+                    <input type="text" name="" id="" placeholder="이메일">
+                    <button>시작하기</button>
+                </div>
+            </div>
+        </div>
+       
+    </section>
+
+    
+</body>
+</html>
+<script>
+
+    let previous = null;
+
+    window.addEventListener('load',()=>{
+        previous= document.querySelector('.show');
+
+
+    })
+
+    const section = document.querySelector('section');
+    section.addEventListener("click",(e)=>{
+        const target = e.target;
+        if(target.classList.contains("title")){
+            if(previous != null) {
+                previous.classList.remove("show");
+            }
+            target.classList.toggle('active')
+            const t = target.nextElementSibling;
+            
+            t.classList.toggle('show');
+            
+            previous = t;
+        }
+    })
+</script>
